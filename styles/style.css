@@ -61,7 +61,7 @@
 
 }
 
-.theme-menu__button{
+.theme-menu__button {
   background: transparent;
   border: none;
   text-transform: uppercase;
@@ -108,7 +108,7 @@
 
 .theme-menu__button:focus-visible::after {
   inline-size: 100%;
-  opacity:0.6; 
+  opacity: 0.6; 
 }
 
 @keyframes arrow {
@@ -161,7 +161,7 @@
   font-size: var(--main-font-size);
   text-shadow: 1px 1px #fff, -1px -1px #fff;
   mix-blend-mode: hard-light;
-  opacity:0.5; 
+  opacity: 0.5; 
 }
 
 @supports (-webkit-text-stroke: 1px #fff) {
@@ -176,6 +176,7 @@
   flex-direction: column;
   gap: 26px;
   padding: 25px;
+  font-variation-settings: var(--text-weight);
 }
 
 .section-text {
@@ -233,9 +234,8 @@
   transform: scaleX(1);
 }
 
-.button:hover .button-text{
+.button:hover .button-text {
   color: var(--background-color);
-   
 }
 
 .button:focus {
@@ -311,7 +311,8 @@
 }
 
 .dialog::backdrop {
-	background-color: rgb(0 0 0 / 0.75);
+	background-color: #000;
+  opacity: 0.75;
 }
 
 .dialog[open] {
