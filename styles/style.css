@@ -108,7 +108,7 @@
 
 .theme-menu__button:focus-visible::after {
   inline-size: 100%;
-  opacity: 0.6; 
+  opacity: 0.6;
 }
 
 @keyframes arrow {
@@ -161,7 +161,7 @@
   font-size: var(--main-font-size);
   text-shadow: 1px 1px #fff, -1px -1px #fff;
   mix-blend-mode: hard-light;
-  opacity: 0.5; 
+  opacity: 0.5;
 }
 
 @supports (-webkit-text-stroke: 1px #fff) {

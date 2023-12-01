@@ -2,8 +2,8 @@
 :root {
     --main-font: 'Inter-Variable', sans-serif;
     --accent-font: 'PressStart2P', fantasy;
-    --text-weight: "wght" 400;
-    --title-weight: "wght" 700;
+    --text-weight: 'wght' 400;
+    --title-weight: 'wght' 700;
     --background-color: #fff;
     --accent-color: #000;
     --background-image: 
