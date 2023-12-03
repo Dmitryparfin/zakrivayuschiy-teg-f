@@ -20,13 +20,13 @@
   :root {
     --text-font-weight: 465;
     --title-font-weight: 785;
-  --background-color: #000;
-  --accent-color: #00CC14;
-  --button-text-color: #00CC14;
-  --background-image: 
-    repeating-linear-gradient(90deg, transparent 0 2px, #000 2px 4px),   
-    repeating-linear-gradient(transparent 0 2px, #000 2px 4px),
-    linear-gradient( #007f0c, #004306);
+    --background-color: #000;
+    --accent-color: #00CC14;
+    --button-text-color: #00CC14;
+    --background-image: 
+      repeating-linear-gradient(90deg, transparent 0 2px, #000 2px 4px),   
+      repeating-linear-gradient(transparent 0 2px, #000 2px 4px),
+      linear-gradient( #007f0c, #004306);
   }
 }
 
@@ -53,5 +53,5 @@
       repeating-linear-gradient(90deg, transparent 0 2px, #d3d3d3 2px 4px),   
       repeating-linear-gradient(transparent 0 2px, #d3d3d3 2px 4px),
       linear-gradient(#e7e7e7, #1a1a1a);
-    }
+  }
 }
