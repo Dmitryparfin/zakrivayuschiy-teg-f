@@ -9,37 +9,15 @@
   background-attachment: fixed;
   background-color: var(--background-color);
   color: var(--accent-color);
-  margin-block: 50px 80px;
+  margin-block: 50px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  filter: sepia(0.4);
-  
-}
-
-.vensel {
-
+  filter: sepia(0.2);
 }
 
 .head {
-  margin-top: 30px;
-  
-}
-
-.header {
-  font-family: var(--accent-font);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  block-size: var(--header-block-size);
-  inline-size: var(--page-inline-size);
-  padding-block-end: 25px;
-  background-image: url('../images/white-abstract-texture-background.jpg');
-  
-  background-size: cover;
-  
-  text-transform: uppercase;
+  margin: 30px 20px 0 20px;
 }
 
 .header-title {
@@ -59,11 +37,7 @@
   background-image: url(../images/svg_1735293387453.svg);
   background-repeat: no-repeat;
   background-position: center;
- 
-  
 }
-
-
 
 .calendar {
   display: flex;
@@ -105,19 +79,12 @@
 
 }
 
-
-
-
-
-
-
 .content {
   inline-size: var(--page-inline-size);
   display: flex;
   flex-direction: column;
   align-items: center;
   background-image: url('../images/white-abstract-texture-background.jpg');
-  
   background-size: cover;
   gap: 50px;
 }
@@ -175,8 +142,6 @@
   border-radius: 10%;
   text-align: center;
 }
-
-
 
 .timing {
   display: flex;
