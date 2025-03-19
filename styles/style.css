@@ -1,33 +1,29 @@
-/* Здесь вы напишете основную часть стилей страницы.
 
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
-
-*/
 
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font);
-  font-variation-settings: "wght" var(--text-font-weight);
-  background-image: var(--background-image);
+  
   background-size: cover;
   background-attachment: fixed;
   background-color: var(--background-color);
   color: var(--accent-color);
-  margin-block: 100px 105px;
+  margin-block: 50px 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  filter: sepia(0.4);
+  
+}
+
+.vensel {
+
+}
+
+.head {
+  margin-top: 30px;
+  
 }
 
 .header {
@@ -35,125 +31,104 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   block-size: var(--header-block-size);
   inline-size: var(--page-inline-size);
   padding-block-end: 25px;
-  margin-block-end: 100px;
-  border: 2px solid var(--accent-color);
-  background: var(--background-color);
+  background-image: url('../images/white-abstract-texture-background.jpg');
+  
+  background-size: cover;
+  
   text-transform: uppercase;
-}
-
-.logo {
-  font-size: var(--logo-font-size);
 }
 
 .header-title {
   font-size: var(--title-font-size);
   margin-block: 20px 25px;
+  text-align: center;
 }
 
-.theme-menu__list {
+.header-title-text {
+  font-size: 30px;
+  font-weight: 500;
+  margin-block: 20px 25px;
+  text-align: center;
+}
+
+.icon {
+  background-image: url(../images/svg_1735293387453.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+ 
+  
+}
+
+
+
+.calendar {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding-inline-start: 20px;
+ 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+ 
+  inline-size: var(--page-inline-size);
+  flex-direction: column
+}
+.day {
+  margin: 0 70px;
+  padding: 10px 0;
+  text-align: center;
+  border: 1px solid #000000; /* Граница между днями */
 }
 
-.theme-menu__button {
-  background: transparent;
-  border: none;
-  text-transform: uppercase;
-  font-size: var(--main-font-size);
-  block-size: 100%;
-  position: relative;
-  transition: opacity 0.3s;
-  cursor: pointer;
+.day h3 {
+  margin: 0;
+  font-size: 30px;
+  color: #000000;
+  padding-bottom: 10px;
+}
+.month {
+  font-size: 25px;
+  color: #777;
+  margin-bottom: 5px;
+}
+.day-number {
+  margin: 10px 0 0;
+  font-size: 30px;
+  font-weight: 400;
+  color: #000000;
 }
 
-.theme-menu__button:hover {
-  opacity: 0.6;
+.wedding-day{
+  font-size: 40px;
+  font-weight: 800;
+
 }
 
-.theme-menu__button:disabled {
-  opacity: 0.6;
-  pointer-events: none;
-  position: relative;
-}
 
-.theme-menu__button:disabled::before {
-  content: "▶";
-  position: absolute;
-  inset-inline-start: -17px;
-  inset-block-end: 0;
-  animation: arrow 0.5s infinite alternate ease-in-out;
-}
 
-.theme-menu__button:focus {
-  outline: none;
-  opacity: 0.6;
-}
 
-.theme-menu__button::after {
-  content: "";
-  display: block;
-  position: absolute;
-  inset-block-end: -2px;
-  inline-size: 100%;
-  block-size: 2px;
-  background-color: var(--accent-color);
-  transform: scaleX(0);
-  transform-origin: 0;
-  transition: transform 0.3s linear;
-}
 
-.theme-menu__button:focus-visible::after {
-  transform: scaleX(1);
-}
+
 
 .content {
   inline-size: var(--page-inline-size);
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url('../images/white-abstract-texture-background.jpg');
+  
+  background-size: cover;
   gap: 50px;
 }
 
 .card {
-  background-color: var(--background-color);
-  border: 2px solid var(--accent-color);
+  background-size: cover;
 }
 
 .card-title {
-  padding: 5px 10px;
-  font-variation-settings: "wght" var(--title-font-weight);
-  font-size: var(--accent-font-size);
-}
-
-.card-image {
-  position: relative;
-  border-block: 2px solid var(--accent-color);
-}
-
-.card-image-item {
-  display: block;
-
-  inline-size: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.image-label {
-  position: absolute;
-  inset-inline-end: 25px;
-  inset-block-start: 25px;
-  font-family: var(--accent-font);
-  color: var(--accent-color);
-  font-size: var(--main-font-size);
-  text-shadow: 1px 1px #fff, -1px -1px #fff;
-  mix-blend-mode: hard-light;
-  opacity: 0.5;
+  font-size: 25px;
+  font-weight: 600;
 }
 
 @supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
@@ -172,217 +147,119 @@
 }
 
 .card-text {
-  font-size: var(--accent-font-size);
-  font-variation-settings: "wght" var(--text-font-weight);
+  font-size: 25px;
   line-height: 1.16667;
+  text-align: center;
 }
 
-.card-button {
-  display: flex;
-  justify-content: flex-end;
-  gap: 5px;
-}
-
-.card__icon-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-
-  background-color: transparent;
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.card__icon-button:focus {
-  outline: none;
-}
-
-.card__icon-button:focus-visible {
-  border: 2px solid var(--accent-color);
-}
-
-.like-icon {
-  block-size: 36px;
-  inline-size: 38px;
-}
-
-.button {
-  background-color: transparent;
-  position: relative;
-  border: 2px solid var(--accent-color);
-  transition: 0.3s;
-}
-
-.button::before {
-  content: "";
-  position: absolute;
-  background-color: var(--accent-color);
-  block-size: 100%;
-  inline-size: 100%;
-  inset-inline-start: 0;
-  inset-block-end: 0;
-  transform: scaleX(0);
-  transform-origin: 0;
-  transition: transform 0.5s ease-in-out;
-}
-
-.button:hover::before {
-  transform: scaleX(1);
-}
-
-.button:hover .button-text {
-  mix-blend-mode: difference;
-}
-
-.button:focus {
-  outline: none;
-}
-
-.button:focus-visible {
-  outline: none;
-  box-shadow: 2px 2px 0px 0px var(--accent-color);
-}
-
-.card__like-button {
-  inline-size: 130px;
-  min-block-size: 38px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.button__text {
-  font-family: var(--accent-font);
-  font-size: var(--main-font-size);
-  color: var(--button-text-color);
-  mix-blend-mode: difference;
-  line-height: 0.9;
-}
-
-.save-container {
-  display: flex;
-  justify-content: center;
-}
-
-.save-button {
-  inline-size: clamp(19.125rem, 18.487rem + 3.723vw, 20.938rem);
-  background-color: var(--background-color);
-  padding: 15px;
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  cursor: pointer;
-}
-
-.floppy {
-  mix-blend-mode: difference;
-  color: var(--button-text-color);
-}
-
-.save-floppy {
-  inline-size: 21px;
-  block-size: 21px;
-}
-
-.dialog {
-  max-inline-size: 357px;
-  padding: 30px 30px;
-  background-color: var(--background-color);
-  border: 2px solid var(--accent-color);
-  color: var(--accent-color, #000);
-  position: fixed;
-  inset: 0;
-  gap: 30px;
-  align-items: center;
-}
-
-.dialog-container {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.dialog::backdrop {
-  background-color: #000;
-  opacity: 0.75;
-}
-
-.dialog[open] {
+.card-list-flower {
   display: flex;
   flex-direction: column;
+  gap: 25px;
+  margin: 25px;
+  padding: 15px;
+  background-color: #5f0a0a;
+  color: #acacac;
+  border-radius: 10%;
+  text-align: center;
 }
 
-.dialog-floppy {
-  inline-size: 89px;
-  block-size: 39px;
+.card-list-present {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 25px;
+  padding: 15px;
+  background-color: #5f0a0a;
+  color: #acacac;
+  border-radius: 10%;
+  text-align: center;
 }
 
-.dialog-text {
-  text-transform: uppercase;
-  font-family: var(--accent-font);
-  line-height: 1.5;
-  font-size: var(--main-font-size);
+
+
+.timing {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  inline-size: var(--page-inline-size);
+  padding: 25px;
+  font-size: 25px;
 }
 
-.close-button {
-  block-size: 38px;
-  min-inline-size: 293px;
-  padding: 9px 17px;
-  text-transform: uppercase;
-  cursor: pointer;
+.timing-2 {
+ text-align: end;
 }
 
-.filter-sepia50 {
-  filter: sepia(50%);
+.timing-4 {
+  text-align: end;
 }
 
-.filter-saturate {
-  filter: saturate(300%);
+.time {
+  font-size: 30px;
 }
 
-.filter-hue {
-  filter: hue-rotate(25deg);
+.button-flower {
+  background-color: #fff; /* Зеленый цвет фона */
+  color: #000; /* Белый цвет текста */
+  padding: 15px 32px; /* Внутренние отступы */
+  font-size: 25px; /* Размер шрифта */
+  border: none; /* Убираем границу */
+  border-radius: 8px; /* Закругляем углы */
+  cursor: pointer; /* Курсор в виде руки при наведении */
+  transition: background-color 0.5s ease; /* Плавное изменение цвета */
+  text-decoration: none;
+  margin: 0 20px;
 }
 
-.filter-invert {
-  filter: invert(100%);
+.button-flower:hover {
+  background-color: #b60c0c; /* Темно-зеленый цвет при наведении */
+  transition: background-color 0.1s ease; 
+  color: #fff;
 }
 
-.filter-sepia90 {
-  filter: sepia(90%);
-}
-
-.filter-blur {
-  filter: blur(5px);
-}
-
-.filter-mix {
-  filter: invert(30%) hue-rotate(100deg) saturate(200%);
-}
-
-@media (width <= 375px) {
-  .image-label {
-    inset-block-start: 23px;
-    inset-inline-end: 11px;
+@media (any-hover: hover) {
+  .button-flower:hover {
+    background-color: #b60c0c;
+    transition: background-color 0.5s ease;
   }
+}
 
-  .save-floppy {
-    inline-size: 28px;
-    block-size: 28px;
-  }
+.button-flower:active {
+  background-color: #fff; /* Еще темнее при нажатии */
+  color: #000;
+}
 
-  .dialog {
-    max-inline-size: 341px;
-    padding: 30px 40px;
-  }
+.button-profile {
+  background-color: #5f0a0a; /* Зеленый цвет фона */
+  color: #fff; /* Белый цвет текста */
+  padding: 15px 32px; /* Внутренние отступы */
+  font-size: 25px; /* Размер шрифта */
+  border: none; /* Убираем границу */
+  border-radius: 8px; /* Закругляем углы */
+  cursor: pointer; /* Курсор в виде руки при наведении */
+  transition: background-color 0.5s ease; /* Плавное изменение цвета */
+  text-decoration: none;
+}
 
-  .close-button {
-    min-inline-size: 257px;
+.button-profile:hover {
+  background-color: #b60c0c; /* Темно-зеленый цвет при наведении */
+  transition: background-color 0.1s ease; 
+}
+
+@media (any-hover: hover) {
+  .button-profile:hover {
+    background-color: #b60c0c;
+    transition: background-color 0.5s ease;
   }
+}
+
+.button-profile:active {
+  background-color: #5f0a0a; /* Еще темнее при нажатии */
+  color: #fff;
+}
+
+.footer-title {
+  font-size: 30px;
+  margin-bottom: 50px;
 }
