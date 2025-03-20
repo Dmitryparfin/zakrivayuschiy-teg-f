@@ -5,8 +5,8 @@
   min-block-size: 100dvb;
   font-family: var(--main-font);
   
-  background-size: cover;
-  background-attachment: fixed;
+  background-size: auto;
+  
   background-color: var(--background-color);
   color: var(--accent-color);
   margin-block: 50px 30px;
@@ -14,15 +14,17 @@
   flex-direction: column;
   align-items: center;
   filter: sepia(0.2);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .head {
-  margin: 30px 20px 0 20px;
+  
 }
 
 .header-title {
   font-size: var(--title-font-size);
-  margin-block: 20px 25px;
+  margin-block: 0 25px;
   text-align: center;
 }
 
@@ -148,8 +150,16 @@
   flex-direction: column;
   gap: 100px;
   inline-size: var(--page-inline-size);
-  padding: 25px;
+  padding: 25px 25px 25px 25px;
   font-size: 25px;
+}
+
+.line {
+  background-image: url(../images/line41.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: visible;
 }
 
 .timing-2 {
@@ -226,5 +236,19 @@
 
 .footer-title {
   font-size: 30px;
-  margin-bottom: 50px;
+  text-align: center;
+}
+
+.vensel {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+}
+
+.vensel:first-child {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
 }
